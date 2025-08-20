@@ -1,7 +1,7 @@
 from django.db import models
 
 class ModeloBase(models.Model):
-    criado_em = models.DateTimeField(auto_now_add=True),
+    criado_em = models.DateTimeField(auto_now_add=True)
     modificado_em = models.DateTimeField(auto_now=True)
 
 
@@ -45,5 +45,6 @@ class Tarefa(ModeloBase):
         blank=True,
         db_table='tarefa_etiqueta'
     )
+
 
 
