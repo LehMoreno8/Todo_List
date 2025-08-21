@@ -24,7 +24,7 @@ class TarefaSerializer(serializers.ModelSerializer):
         write_only=True,
         required=False
     )
-    etiquetas_ids = serializers.PrimaryKeyRelatedField(
+    etiquetas_id = serializers.PrimaryKeyRelatedField(
         source='etiquetas',
         queryset=Etiqueta.objects.all(),
         many=True,
@@ -35,4 +35,5 @@ class TarefaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tarefa
         fields = '__all__'
+
 
